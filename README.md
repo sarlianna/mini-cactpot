@@ -44,7 +44,10 @@ Different output types:
 TODOs:
 ------
 
+- finish the thing
+- implement safest row output
 - I'd very much like to try this using core.logic instead.
+- it should give more information to help the player make a decision, like a list of rows, their average payout, and probabilities involved.
 
 ## Installation
 
@@ -52,6 +55,18 @@ TODOs:
 git clone and lein jar
 
 ## Usage
+
+the program represents the matrix as a vector of vectors, with the indexes corresponding to this chart:  
+```
+  x represents a number in the grid
+  lines represent the direction of the row the number represents
+  1  2  3  4  5
+   \ |  |  | /
+ 7 --x  x  x (vector at index 0)
+ 8 --x  x  x (vector at index 1)
+ 9 --x  x  x (vector at index 2)
+ind. 0  1  2  of list
+```
 
 args should be a vector of maps containing 4 different positions and their values.  
 ex: java -jar mini-cactpot-0.1.0-standalone.jar "[{:val 2 :row 0 :col 0} {:val 1 :row 1 :col 1} {:val 7 :row 1 :col 2} {:val 3 :row 2 :col 2}]"
