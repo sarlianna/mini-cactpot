@@ -95,8 +95,7 @@ ind. 0  1  2  of list
 (defn get-possible-rows [row remaining-nums]
   (let [non-nil (filter #(not nil? %))
         non-nil-count (count non-nil)]
-
-  )
+  ))
 
 
 (defn score-row
@@ -119,7 +118,7 @@ ind. 0  1  2  of list
              "9 --x  x  x")]
     (doseq [msg help]
       (print msg))
-    (print "Best row:"
+    (print "Best risky row:"
     (print row-num))
 
 
